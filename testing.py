@@ -8,5 +8,7 @@ import requests
 # with open('./work_log.txt', 'w') as fisier:
 #     fisier.writelines(mesaj_actualizare_zi)
 
-END_POINT_SHEETY = os.getenv('END_POINT_SHEETY')
+# AUTHORIZATION_SHEETY = 'Bearer fs'
+from data_base import END_POINT_SHEETY, AUTHORIZATION_SHEETY
 print(END_POINT_SHEETY)
+print(AUTHORIZATION_SHEETY)
