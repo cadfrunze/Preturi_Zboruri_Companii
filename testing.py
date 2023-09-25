@@ -16,6 +16,3 @@
 # # }
 # # editare_SHEETY_editare = requests.put(url=f'{str(END_POINT_SHEETY)}/7', headers=headers, json=editare)
 # # print(editare_SHEETY_editare.text)
-
-
-
