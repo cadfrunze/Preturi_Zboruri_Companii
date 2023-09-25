@@ -1,3 +1,5 @@
 import os
 END_POINT_SHEETY = os.getenv('END_POINT_SHEETY')
 AUTHORIZATION_SHEETY = os.getenv('AUTHORIZATION_SHEETY')
+APP_KEY_TEQ = os.getenv('APP_KEY_TEQ')
+
