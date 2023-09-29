@@ -1,5 +1,6 @@
 from data_base import *
 import requests
+import pandas as pd
 # exemplu: "prices": [
     # {
     #   "city": "Paris",
