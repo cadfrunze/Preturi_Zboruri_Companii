@@ -19,6 +19,16 @@
 # # cerere = requests.get(url=str(END_POINT_SHEETY), headers=header)
 # # print(cerere.text)
 from datetime import datetime
-
-with open('./work_log.txt', 'a') as fisier:
-    fisier.writelines(datetime.now().strftime('\nData: %d/%m/%Y | Ora: %H:%M'))
+range_zi: int = 2
+ziua_calendar: int = datetime.now().day
+luna_calendar: int = datetime.now().month
+an_calendar: int = datetime.now().year
+try:
+    zi = datetime(year=an_calendar, month=luna_calendar, day=(ziua_calendar + range_zi))
+except ValueError:
+    range: int = range_zi - 1
+    if luna_calendar > 12:
+        luna_calendar = 1
+        an_calendar: int = datetime.now().year + 1
+    zi = datetime(year=an_calendar, month=luna_calendar, day=range_zi)
+print(zi)

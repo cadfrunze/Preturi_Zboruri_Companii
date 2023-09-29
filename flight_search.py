@@ -19,7 +19,7 @@ paramtri_search = {
 }
 
 cerere_test = requests.get(url=API_TEQ_SEARCH, headers=header_teq, params=paramtri_search)
-print(cerere_test.text)
+print(cerere_test)
 
 
 
