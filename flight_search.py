@@ -1,6 +1,7 @@
 import requests
 from datetime import datetime
 from data_base import APP_KEY_TEQ
+from pprint import pprint
 API_TEQ_SEARCH = 'https://api.tequila.kiwi.com/v2/search'
 MY_CITY: str = 'Cluj-Napoca'
 MY_IATA: str = 'CLJ'
@@ -40,9 +41,11 @@ class FlightSearch:
             self.range_zi = self.range_zi - 1
             if self.luna_calendar > 12:
                 self.luna_calendar = 1
-                self.an_calendar: int = 1
+                self.an_calendar += 1
+            else:
+                self.luna_calendar += 1
         #     self.zi = datetime(year=self.an_calendar, month=self.luna_calendar, day=self.range_zi)
-        # print(self.zi)
+        # pprint(self.zi)
     def cautare_zboruri(self) -> None:
         """Metoda responsabila cu cautare zboruri companii aeriene"""
         pass

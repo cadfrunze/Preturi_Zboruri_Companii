@@ -1,5 +1,6 @@
 from data_base import END_POINT_SHEETY, AUTHORIZATION_SHEETY
 import requests
+from datetime import datetime
 
 # from datetime import datetime
 # range_zi: int = 2
@@ -16,13 +17,13 @@ import requests
 #     zi = datetime(year=an_calendar, month=luna_calendar, day=range_zi)
 # print(zi)
 
-header: dict = {
-    'Content-Type': 'application/json',
-    'Authorization': AUTHORIZATION_SHEETY
-}
+# header: dict = {
+#     'Content-Type': 'application/json',
+#     'Authorization': AUTHORIZATION_SHEETY
+# }
 
-cerere_SHEETY_get = requests.get(url=str(END_POINT_SHEETY), headers=header)
-print(cerere_SHEETY_get.text)
+# cerere_SHEETY_get = requests.get(url=str(END_POINT_SHEETY), headers=header)
+# print(cerere_SHEETY_get.text)
 # editare: dict = {
 #     'price': {
 #         'city': 'Nuremberg',
@@ -34,3 +35,5 @@ print(cerere_SHEETY_get.text)
 # print(editare_SHEETY_editare.text)
 # cerere = requests.get(url=str(END_POINT_SHEETY), headers=header)
 # print(cerere.text)
+with open('./work_log.txt', 'a') as fisier:
+    fisier.writelines(datetime.now().strftime('\nData: %d/%m/%Y | Ora: %H:%M'))
