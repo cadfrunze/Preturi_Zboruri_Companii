@@ -35,5 +35,6 @@ from datetime import datetime
 # print(editare_SHEETY_editare.text)
 # cerere = requests.get(url=str(END_POINT_SHEETY), headers=header)
 # print(cerere.text)
-with open('./work_log.txt', 'a') as fisier:
-    fisier.writelines(datetime.now().strftime('\nData: %d/%m/%Y | Ora: %H:%M'))
+# with open('./work_log.txt', 'a') as fisier:
+#     fisier.writelines(datetime.now().strftime('\nData: %d/%m/%Y | Ora: %H:%M'))
+
